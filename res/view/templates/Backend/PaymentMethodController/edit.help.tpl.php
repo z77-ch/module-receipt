@@ -1,0 +1,29 @@
+<?php
+/**
+ * Help for the payment-method window (ADR-048) — a section per field (`data-help-field` = the
+ * field's `name`). Also the KI-Assistent's knowledge (ADR-055).
+ */
+?>
+<h3>Zahlungsart</h3>
+<p>Eine Zahlungsart sagt, wie ein Beleg bezahlt wurde — Kasse, Firmenkarte, privat ausgelegt. Auf dem Handy und im Belegjournal heisst die Auswahl «Bezahlt mit». Sie liefert das Haben-Konto; die Vorlage liefert Soll und MWST.</p>
+<p>Das Kreditorenjournal verwendet dieselben Zahlungsarten («Bezahlt mit» einer Lieferantenrechnung). Eine Änderung gilt für neue Belege; ein erfasster Beleg hat sein Haben beim Erfassen übernommen und behält es (im Belegjournal pro Beleg änderbar). Eine Zahlungsart wird nie gelöscht, nur <strong>deaktiviert</strong> (Schalter «Aktiv» in der Liste).</p>
+<section data-help-field="label">
+<h3>Name</h3>
+<p>So steht die Zahlungsart auf dem Handy unter «Bezahlt mit», z.B. «Kasse», «Firmenkarte», «privat ausgelegt».</p>
+</section>
+<section data-help-field="code">
+<h3>Code</h3>
+<p>Der Schlüssel, den jeder Beleg speichert: 2–16 Zeichen, Kleinbuchstaben, Ziffern und Bindestrich, mit einem Buchstaben beginnend. Nach dem Anlegen fix.</p>
+</section>
+<section data-help-field="bank_account_code">
+<h3>Bankkonto</h3>
+<p>Für eine Zahlungsart, die <strong>über eine Bank</strong> zahlt (E-Banking, Debitkarte): das Bankkonto aus Stammdaten › Finanzen › Bankkonten wählen. Das Haben-Konto kommt dann von dort und lässt sich hier nicht eintragen — ändert das Konto der Bank, gilt es sofort für die Zahlungsart. «keines» für Kasse und «privat ausgelegt»: dann gilt das Feld «Haben».</p>
+</section>
+<section data-help-field="credit_account">
+<h3>Haben</h3>
+<p>Bei einer Zahlungsart mit Bankkonto zeigt das Feld das Konto der Bank und ist gesperrt. Sonst: Das Konto, gegen das der Betrag gebucht wird: die Kasse (1000), das Abrechnungskonto der Firmenkarte, oder bei «privat ausgelegt» das Konto, über das die Auslage zurückbezahlt wird (z.B. ein Kontokorrent des Inhabers). Nur bebuchbare, aktive Konten.</p>
+</section>
+<section data-help-field="position">
+<h3>Reihenfolge</h3>
+<p>In welcher Folge die Zahlungsarten auf dem Handy und in dieser Liste stehen — kleinere Zahl zuerst. Mehrere dürfen dieselbe Zahl haben.</p>
+</section>
